@@ -1,0 +1,19 @@
+.chat-side
+  .side-header
+    .side-header__box
+      .side-header__box__username
+        伊東 智一
+      .side-header__box__menu
+        .side-header__box__btn
+          =link_to "#", class: "new-group__btn new-group__btn--icon" do
+            = icon('fa','edit', class: "new-group--icon")
+          =link_to "#", class: "edit-user__btn edit-user__btn--icon" do
+            = icon('fa','cog', class: "edit-user__btn--icon")
+  .groups
+    =link_to "#", class: "group" do 
+      .group__name
+        チーム０
+      .group__latest-message
+        まだメッセージがありません
+   
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
