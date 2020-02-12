@@ -29,10 +29,12 @@ Things you may want to cover:
 |name|string|null: false|
 |Email|string|null: false, unique: true|
 |password|string|null: false|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
 * has_many :groups,through::users_groups
 * has_many :messages
+* has_many :users_groups
 
 ## messagesテーブル
 
@@ -52,10 +54,12 @@ Things you may want to cover:
 |cloumn|Type|Options|
 |------|----|-------|
 |name|string|null: false|
+|user_id|integer|null: false,foreign_key: true|
  
 ### Association
 * has_many :message,through: :users_groups
 * has_many :users
+* has_many :users_groups
 
 ## users_groupsテーブル
 
